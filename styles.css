@@ -1,27 +1,41 @@
-.body
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(149, 202, 225);
-    font-family: Arial, sans-serif;
-}
-.d{
-    display:flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 50px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+/* Reset margin and padding */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
+
+/* Body styling with background image */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/chocolate.jpg'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Background image with gradient overlay */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Creates parallax effect */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Container (form box) styling */
+.d {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;      /* Centers items inside the .d container horizontally */
+    justify-content: center;  /* Centers items inside the .d container vertically */
+    max-width: 400px;         /* Optional: to prevent the form from getting too wide */
+    width: 100%;
+}
+
+/* Input fields styling */
 .d input {
     width: 250px;
     padding: 10px;
@@ -29,26 +43,31 @@ body, html {
     border-radius: 5px;
     font-size: 14px;
 }
-.b{
+
+/* Button styling */
+.b {
     width: 150px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #3243f9;
+    background-color: #ff7043;
     color: whitesmoke;
     font-size: 16px;
     cursor: pointer;
     margin: 0 auto;
 }
-.sign
-{
+
+/* Center the form */
+.sign {
     margin: 0 auto;
 }
-body {
-    background-image: url('C:\Users\NAGA MANOGNA\OneDrive\Desktop\Projects\LoginPage\chocolate.jpg'); /* Your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Ensures the body takes the full height of the viewport */
-    margin: 0; /* Removes default margin */
+
+/* Ensure .d container is properly centered */
+.d {
+    max-width: 400px; /* Optional: to prevent the form from getting too wide */
+    width: 100%;
+}
+.b:hover {
+    background-color: #ff5722; /* Darker shade of orange */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
